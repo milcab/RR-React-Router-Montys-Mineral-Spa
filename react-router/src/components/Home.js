@@ -1,6 +1,6 @@
 
 
-export default function Home () {
+ function Home () {
     return(
         <div className="homepage">
             <h1>Visit our resort and change your life!</h1>
@@ -13,3 +13,4 @@ export default function Home () {
     )
 
 }
+export default Home;

@@ -1,6 +1,6 @@
 
 
-export default function Packages() {
+ function Packages() {
 
     return (
         <div>
@@ -13,3 +13,4 @@ export default function Packages() {
         </div>
     )
 }
+export default Packages;
