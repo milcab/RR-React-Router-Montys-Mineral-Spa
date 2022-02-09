@@ -12,29 +12,41 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1 className="title">Welcome to Monty's Mineral SPA</h1>
+      <Router>
+        <header>
+          <h1 className="title">Welcome to Monty's Mineral SPA</h1>
 
-        <div className="navBar">
-          <ul>
-            <li>
-              <a href={<Home />}>Home</a>
-            </li>
-            <li>
-              <a href={<About />}>About Us</a>
-            </li>
-            <li>
-              <a href={<Packages packages={packages}/>}>Our Packages</a>
-            </li>
-          </ul>
+          <div className="navBar">
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="about">About Us</Link>
+
+              </li>
+              <li>
+                <Link to="/packages">Our Packages</Link>
+              </li>
+            </ul>
+          </div>
+
+        </header>
+        <div className='display'>
+          <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/packages" render={() => <Packages packages={packages} />} />
         </div>
-
-      </header>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+
+
+
 
 
 
